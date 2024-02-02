@@ -12,6 +12,7 @@ import {
 
 import { MySafeAreaView } from "../components/MySafeAreaView";
 import { MyStack } from "../components/MyStack";
+import { Image } from "react-native";
 
 export default function Home() {
   const router = useRouter();
@@ -23,10 +24,14 @@ export default function Home() {
           space="$4"
           maxWidth={600}
         >
-          <H1 textAlign="center">Welcome to Tamagui.</H1>
+          <Image
+            source={require('../assets/hobby.jpg')}
+            style={{ width: 200, height: 200, alignSelf: 'center', marginVertical: 10 }}
+            resizeMode="cover"
+          />
+          <H1 textAlign="center">Hobby.</H1>
           <Paragraph textAlign="center">
-            Here&apos;s a basic starter to show navigating from one screen to
-            another.
+          Bilbo Bolsón lleva una vida sencilla con sus compañeros hobbits en la comarca, hasta que el mago Gandalf llega y lo convence de unirse a un grupo de enanos para recuperar el reino de Erebor
           </Paragraph>
         </YStack>
 
